@@ -1,0 +1,33 @@
+# Glossaire:
+- Appeleons "mounting" le processus de passer par les lignes avant le "return"
+- Appelons "virtual dom" le processus de passer par les lignes du "return"
+- Appelons "render" les 2 processus ensemble : mounting + virtual dom
+
+# useEffet:
+- Est appelé après le premier render accompli
+
+# re-render:
+- Quand on re-render un composant, on démonte l'ancien puis on construit le nouveau
+- Puisque l'on démonte, on fait appel aux "cleaning function" dans les useEffect
+
+# setState:
+- Après un setState, on repasse toujours par un re-render à la fin
+- Peu importe le nombre de setState que l'on fait dans la stack, seule 1 re-render sera appliquée.
+
+# Lifecycle:
+- Early mounting, notemment, on prépare les state,
+- 1er render:  mounting again ? + virtual dom. Les states sont initialisées.
+- Use Effect 
+    => setState
+- Re-render 
+
+# Props:
+- Quand les props d'un composant change => re-render, sauf si on utilise React.Memo
+
+# Composant Enfant:
+- Si le parent re-render, est-ce que l'enfant aussi ?
+- Et Inversement ?
+
+
+# WARNING
+- Pas de hooks dans des boucles ou conditions
